@@ -14,11 +14,11 @@ class App extends Component {
             <img src={logo} className="App-logo" alt="logo" />
             <h1 className="App-title">Fib Calculator version KUBERNETES</h1>
             <Link to="/">Home</Link>
-            <Link to="/otherpage">Other Page</Link>
+            <Link to="/OtherPage">Other Page</Link>
           </header>
           <div>
             <Route exact path="/" component={Fib} />
-            <Route path="/otherpage" component={OtherPage} />
+            <Route path="/OtherPage" component={OtherPage} />
           </div>
         </div>
       </Router>

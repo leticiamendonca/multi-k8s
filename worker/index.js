@@ -1,9 +1,9 @@
-const keys = require('./keys');
-const redis = require('redis');
+import { redisHost, redisPort } from './keys';
+import { createClient } from 'redis';
 
-const redisClient = redis.createClient({
-  host: keys.redisHost,
-  port: keys.redisPort,
+const redisClient = createClient({
+  host: redisHost,
+  port: redisPort,
   retry_strategy: () => 1000
 });
 const sub = redisClient.duplicate();
